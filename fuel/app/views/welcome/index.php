@@ -14,24 +14,26 @@
                         <h3 class="panel-title">投稿</h3>
                     </div>
                     <div class="panel-body">
-                        <!-- Name input-->
-                        <div class="form-group">
-                            <label>ユーザ名</label>
-                            <div>
-                                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                        <form action="/php_fuel/board/public/index.php/welcome/save" accept-charset="utf-8" method="post">
+                            <!-- Name input-->
+                            <div class="form-group">
+                                <label>ユーザ名</label>
+                                <div>
+                                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label>メッセージ</label>
-                            <div>
-                                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                            <div class="form-group">
+                                <label>メッセージ</label>
+                                <div>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-primary btn-lg">送信</button>
+                            <div class="form-group">
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg">送信</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </thead>

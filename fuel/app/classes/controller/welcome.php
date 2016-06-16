@@ -39,6 +39,15 @@ class Controller_Welcome extends Controller
         return Response::forge(View::forge('welcome/index',$data));
 	}
 
+    public function action_save()
+    {
+        
+        $post = Model_Post::forge();
+        $post->user = Input::post('name');
+        $post->message = Input::post('message');
+        $post->save();
+        Response::redirect('index.php/welcome/index');
+    }
 	/**
 	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
 	 * show how to use them.
