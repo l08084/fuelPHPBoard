@@ -259,7 +259,11 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	'always_load'  => array(
+        'packages' => array(
+            'orm',
+        ),
+    ),
 
 		/**
 		 * These packages are loaded on Fuel's startup.
