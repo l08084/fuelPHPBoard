@@ -29,7 +29,10 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-		return Response::forge(View::forge('welcome/index'));
+		$row = array();
+        $row['user'] = 'testUser';
+        $row['message'] = "テストテスト家!";
+        return Response::forge(View::forge('welcome/index',$row));
 	}
 
 	/**

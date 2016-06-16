@@ -36,6 +36,21 @@
                 </div>
             </thead>
             <tbody>
+                <?php //foreach ($rows as $row): ?>
+                    <tr style="height:80">
+                        <td>
+                            <div>
+                                <p class="text-left">
+                                    <?php echo/* $row['user'];*/ $user; ?>
+                                </p>
+                                <p class="text-left">
+                                    <?php echo /*nl2br($row['message']);*/ nl2br($message); ?>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                <!-- <?php //endforeach; ?> -->
+                <!--
                 <tr style="height:80">
                     <td>
                         <div>
@@ -60,6 +75,7 @@
                         </div>
                     </td>
                 </tr>
+                -->
             </tbody>
         </table>
     </div>
