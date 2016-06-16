@@ -36,20 +36,20 @@
                 </div>
             </thead>
             <tbody>
-                <?php //foreach ($rows as $row): ?>
+                <?php foreach ($posts as $post): ?>
                     <tr style="height:80">
                         <td>
                             <div>
                                 <p class="text-left">
-                                    <?php echo/* $row['user'];*/ $user; ?>
+                                    <?php echo $post['user']; /*$user;*/ ?>
                                 </p>
                                 <p class="text-left">
-                                    <?php echo /*nl2br($row['message']);*/ nl2br($message); ?>
+                                    <?php echo nl2br($post['message']); /*nl2br($message);*/ ?>
                                 </p>
                             </div>
                         </td>
                     </tr>
-                <!-- <?php //endforeach; ?> -->
+                <?php endforeach; ?>
                 <!--
                 <tr style="height:80">
                     <td>
