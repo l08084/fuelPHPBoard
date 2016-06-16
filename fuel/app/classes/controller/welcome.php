@@ -22,49 +22,38 @@
 class Controller_Welcome extends Controller
 {
 	/**
-	 * The basic welcome message
-	 *
-	 * @access  public
-	 * @return  Response
+	 * 掲示板画面を初期表示する
 	 */
 	public function action_index()
 	{
-		/*
-        $row = array();
-        $row['user'] = 'testUser';
-        $row['message'] = "テストテスト家!";
-        */
+        // 全投稿データを取得
         $data  = array();
         $data['posts'] = Model_Post::find('all');
+        
+        // 掲示板画面を表示(引数:投稿データ)
         return Response::forge(View::forge('welcome/index',$data));
 	}
 
+    /**
+     * フォームの内容をDBに保存する
+     */
     public function action_save()
     {
-        
+        // 投稿モデルのインスタンスを作成
         $post = Model_Post::forge();
+        
+        // フォームに入力した内容を投稿モデルに設定
         $post->user = Input::post('name');
         $post->message = Input::post('message');
+        
+        // 新規作成した投稿モデルをDBにInsert
         $post->save();
+        
+        // 掲示板画面を再表示
         Response::redirect('index.php/welcome/index');
     }
-	/**
-	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
-	 * show how to use them.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_hello()
-	{
-		return Response::forge(Presenter::forge('welcome/board'));
-	}
-    
-    public function action_board()
-    {
-        return Response::forge(Presenter::forge('bultin/board'));
-    }
-	/**
+	
+    /**
 	 * The 404 action for the application.
 	 *
 	 * @access  public

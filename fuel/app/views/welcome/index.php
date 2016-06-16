@@ -43,41 +43,15 @@
                         <td>
                             <div>
                                 <p class="text-left">
-                                    <?php echo $post['user']; /*$user;*/ ?>
+                                    <?php echo $post['user']; ?>
                                 </p>
                                 <p class="text-left">
-                                    <?php echo nl2br($post['message']); /*nl2br($message);*/ ?>
+                                    <?php echo nl2br($post['message']); ?>
                                 </p>
                             </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>
-                <!--
-                <tr style="height:80">
-                    <td>
-                        <div>
-                            <p class="text-left">
-                                ユーザ1
-                            </p>
-                            <p class="text-left">
-                            テストテストテストテストテストテストテスト
-                            </p>
-                        </div>
-                    </td>
-                </tr>
-                <tr style="height:80">
-                    <td>
-                        <div>
-                            <p class="text-left">
-                                ユーザ2
-                            </p>
-                            <p class="test-left">
-                            テストテストテスト22222222
-                            </p>
-                        </div>
-                    </td>
-                </tr>
-                -->
             </tbody>
         </table>
     </div>
